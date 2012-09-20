@@ -1,6 +1,6 @@
 <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
 
-# Let's make the Web prettier.
+# Let's make the Web prettier BIS.
 
 Markdown.css is better default styling for your Markdown files. It's heavily
 inspired by the [Space](http://getspace.org) WordPress theme. This page is
