@@ -1,0 +1,36 @@
+<p>One meta-character shows &#8220;emphasis&#8221;:</p>
+
+<ul>
+<li>The element shown as <em>testText</em> was written as <code>_testText_</code>.</li>
+<li>The element shown as <em>testText</em> was written as <code>*testText*</code>.</li>
+</ul>
+
+<p>Two meta-character makes the text &#8220;bold&#8221;:</p>
+
+<ul>
+<li>The element shown as <strong>testText</strong> was written as <code>__testText__</code>.</li>
+<li>The element shown as <strong>testText</strong> was written as <code>**testText**</code>.</li>
+</ul>
+
+<p>Isolated meta-characters are <strong>NOT</strong> interchangeable:</p>
+
+<ul>
+<li>The element shown as <em>*testText*</em> was written as <code>_*testText*_</code>.</li>
+<li>The element shown as <em>_testText_</em> was written as <code>*_testText_*</code>.</li>
+</ul>
+
+<p>Coupled metacharacters are interchangeabile:</p>
+
+<ul>
+<li>The element shown as <em><strong>testText</strong></em> was written as <code>_**testText**_</code>.</li>
+<li>The element shown as <strong><em>testText</em></strong> was written as <code>**_testText_**</code>.</li>
+<li>The element shown as <strong><em>testText</em></strong> was written as <code>__*testText*__</code>.</li>
+<li>The element shown as <em><strong>testText</strong></em> was written as <code>*__testText__*</code>.</li>
+</ul>
+
+<p>This section simply tests further unknown/undefined behavior:</p>
+
+<ul>
+<li>The element shown as <em>*</em>testText<em>*</em> was written as <code>_*_testText_*_</code>.</li>
+<li>The element shown as <em>_</em>testText<em>_</em> was written as <code>*_*testText*_*</code>.</li>
+</ul>

@@ -52,11 +52,30 @@ Here's an example of an ordered list. I'm making this sentence really long to
 test the line wrapping.
 
 1. This list element is the first list element of many which will surely come.
-2. This list element is the **second** list element, and probably my favorite out
+1. This list element is the **second** list element, and probably my favorite out
    of all of them.
-3. This list element is the *third* list element, which means it probably is
+1. This list element is the *third* list element, which means it probably is
    anxious and has to fill niches not filled by the other two.
-4. The fourth list element is lazy.
+1. The fourth list element is lazy.
+	2. First nested numerberd lists shows _emphasis_.
+		3. The element shown as _4.1.a_ was written as `_4.1.a_`.
+		3. The element shown as *4.1.b* was written as `*4.1.b*`.
+	2. Second nested numerberd lists shows **bold**.
+		3. The element shown as __4.2.a__ was written as `__4.2.a__`.
+		3. The element shown as **4.2.b** was written as `**4.2.b**`.
+	2. Third nested numerberd lists shows interchangeability of underscored and star characters
+		3. The element shown as _*4.3.a*_ was written as `_*4.3.a*_`.
+		3. The element shown as *_4.3.b_* was written as `*_4.3.b_*`.
+	2. Fourth nested numerberd lists shows interchangeability of underscored and star characters
+		3. The element shown as _**4.4.a**_ was written as `_**4.4.a**_`.
+		3. The element shown as **_4.4.b_** was written as `**_4.4.b_**`.
+		3. The element shown as __*4.4.c*__ was written as `__*4.4.c*__`.
+		3. The element shown as *__4.4.d__* was written as `*__4.4.d__*`.
+	2. Fifth nested numerberd lists tests further unknown/undefined behaviour
+		3. The element shown as _*_4.5.a_*_ was written as `_*_4.5.a_*_`.
+		3. The element shown as *_*4.5.b*_* was written as `*_*4.5.b*_*`.
+
+
 
 ### Doubly Nested Lists
 
@@ -368,7 +387,29 @@ the CSS I'm using to style this document:
     }
 
 
-### Get Started
+<!-- Below, include "Sample files", "Getting started", and "History" -->
+
+
+### Sample files
+
+#### Sample files using CSS version 1
+
+View a sample file that implements most of the Markdown spec:
+
+* [as HTML via jsdelivr.net](https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/examples/ex1+cssV1.html)
+* [as HTML via github.io](http://p19z.github.io/markdowncss/examples/ex1+cssV1.html)
+* [as raw markdown](https://raw.github.com/p19z/markdowncss/master/examples/ex1+cssV1.md)
+
+
+#### Sample file using staging CSS version
+
+View a sample file that implements most of the Markdown spec and uses
+the staging version of the style sheet:
+
+* [as HTML via github.io](http://p19z.github.io/markdowncss/examples/ex1+staging.html)
+
+
+### Getting started
 
 Just add the following line to the top of your
 `.md`, `.mdx`, `.text` or `.markdown` files:
@@ -385,3 +426,31 @@ Experimental stylesheet can be included through:
 
     <link type="text/css" rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown-staging.css"/>
+
+
+##### Note: explicit closing tag
+
+Depending on your framework and final rendering engine, for the markdown
+to parse correctly, you might need to add an explicit closing `</link>`
+tag. This is not technically correct HTML, but might be a workaround if
+you experience problems with the `<link>` tag on its own.
+
+
+#### Alternative content delivery
+
+Instead of using `jsdelivr.net`, we should be able to include the
+stylesheet *from the master branch*, using `github.io`, like so:
+
+    <link type="text/css" rel="stylesheet"
+    href="https://p19z.github.io/markdowncss/markdown.css"/>
+
+
+### History
+
+* SEP 20, 2012 - Copied from Kevin Burke's project <http://bitbucket.org/kevinburke/markdowncss>.
+* NOV 25, 2019 - Updated URLs, switch to using <https://github.com/p19z/markdowncss>,
+and change link to use <https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css>
+otherwise we can't load CSS in some (most?) cases. Using jsdelivr.net as
+a proxy instead of directly accessing Github, prevents the following error:
+> The resource from “https://raw.github.com/p19z/markdowncss/master/markdown.css”
+> was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).

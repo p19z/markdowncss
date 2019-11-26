@@ -1,1 +1,4 @@
 *.html text eol=lf
+
+# Pure Windows files
+index.html eol=crlf

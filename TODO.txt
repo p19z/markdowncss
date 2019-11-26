@@ -1,0 +1,4 @@
+[ ] There is a bug in my static markdown processor: the nested numered
+list is incorrectly translated to HTML in the first example, whereas we
+can see in `mdTests\numberedList_withWrappedLines.md` that it works fine
+when the list is "on its own".

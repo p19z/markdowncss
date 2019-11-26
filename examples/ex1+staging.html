@@ -1,5 +1,8 @@
+<!-- link type="text/css" rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown-staging.css"/ -->
+
 <p><link type="text/css" rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css"/></p>
+href="https://p19z.github.io/markdowncss/markdown-staging.css"/></p>
 
 <h1>This is a really big, large title.</h1>
 
@@ -60,7 +63,36 @@ test the line wrapping.</p>
 of all of them.</li>
 <li>This list element is the <em>third</em> list element, which means it probably is
 anxious and has to fill niches not filled by the other two.</li>
-<li>The fourth list element is lazy.</li>
+<li>The fourth list element is lazy.
+<ol>
+<li>First nested numerberd lists shows <em>emphasis</em>.
+<ol>
+<li>The element shown as <em>4.1.a</em> was written as <code>_4.1.a_</code>.</li>
+<li>The element shown as <em>4.1.b</em> was written as <code>*4.1.b*</code>.</li>
+</ol></li>
+<li>Second nested numerberd lists shows <strong>bold</strong>.
+<ol>
+<li>The element shown as <strong>4.2.a</strong> was written as <code>__4.2.a__</code>.</li>
+<li>The element shown as <strong>4.2.b</strong> was written as <code>**4.2.b**</code>.</li>
+</ol></li>
+<li>Third nested numerberd lists shows interchangeability of underscored and star characters
+<ol>
+<li>The element shown as <em><em>4.3.a</em></em> was written as <code>_*4.3.a*_</code>.</li>
+<li>The element shown as <em><em>4.3.b</em></em> was written as <code>*_4.3.b_*</code>.</li>
+</ol></li>
+<li>Fourth nested numerberd lists shows interchangeability of underscored and star characters
+<ol>
+<li>The element shown as <em><strong>4.4.a</strong></em> was written as <code>_**4.4.a**_</code>.</li>
+<li>The element shown as <strong><em>4.4.b</em></strong> was written as <code>**_4.4.b_**</code>.</li>
+<li>The element shown as <strong><em>4.4.c</em></strong> was written as <code>__*4.4.c*__</code>.</li>
+<li>The element shown as <em><strong>4.4.d</strong></em> was written as <code>*__4.4.d__*</code>.</li>
+</ol></li>
+<li>Fifth nested numerberd lists tests further unknown/undefined behaviour
+<ol>
+<li>The element shown as <em><em></em>4.5.a<em></em></em> was written as <code>_*_4.5.a_*_</code>.</li>
+<li>The element shown as <em><em></em>4.5.b<em></em></em> was written as <code>*_*4.5.b*_*</code>.</li>
+</ol></li>
+</ol></li>
 </ol>
 
 <h3>Doubly Nested Lists</h3>
@@ -377,7 +409,30 @@ button::-moz-focus-inner {
 }
 </code></pre>
 
-<h3>Get Started</h3>
+<!-- Below, include "Sample files", "Getting started", and "History" -->
+
+<h3>Sample files</h3>
+
+<h4>Sample files using CSS version 1</h4>
+
+<p>View a sample file that implements most of the Markdown spec:</p>
+
+<ul>
+<li><a href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/examples/ex1+cssV1.html">as HTML via jsdelivr.net</a></li>
+<li><a href="http://p19z.github.io/markdowncss/examples/ex1+cssV1.html">as HTML via github.io</a></li>
+<li><a href="https://raw.github.com/p19z/markdowncss/master/examples/ex1+cssV1.md">as raw markdown</a></li>
+</ul>
+
+<h4>Sample file using staging CSS version</h4>
+
+<p>View a sample file that implements most of the Markdown spec and uses
+the staging version of the style sheet:</p>
+
+<ul>
+<li><a href="http://p19z.github.io/markdowncss/examples/ex1+staging.html">as HTML via github.io</a></li>
+</ul>
+
+<h3>Getting started</h3>
 
 <p>Just add the following line to the top of your
 <code>.md</code>, <code>.mdx</code>, <code>.text</code> or <code>.markdown</code> files:</p>
@@ -397,3 +452,34 @@ href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css"/&gt;
 <pre><code>&lt;link type="text/css" rel="stylesheet"
 href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown-staging.css"/&gt;
 </code></pre>
+
+<h5>Note: explicit closing tag</h5>
+
+<p>Depending on your framework and final rendering engine, for the markdown
+to parse correctly, you might need to add an explicit closing <code>&lt;/link&gt;</code>
+tag. This is not technically correct HTML, but might be a workaround if
+you experience problems with the <code>&lt;link&gt;</code> tag on its own.</p>
+
+<h4>Alternative content delivery</h4>
+
+<p>Instead of using <code>jsdelivr.net</code>, we should be able to include the
+stylesheet <em>from the master branch</em>, using <code>github.io</code>, like so:</p>
+
+<pre><code>&lt;link type="text/css" rel="stylesheet"
+href="https://p19z.github.io/markdowncss/markdown.css"/&gt;
+</code></pre>
+
+<h3>History</h3>
+
+<p><ul>
+<li>SEP 20, 2012 - Copied from Kevin Burke&#8217;s project <a href="http://bitbucket.org/kevinburke/markdowncss">http://bitbucket.org/kevinburke/markdowncss</a>.</li>
+<li>NOV 25, 2019 - Updated URLs, switch to using <a href="https://github.com/p19z/markdowncss">https://github.com/p19z/markdowncss</a>,
+and change link to use <a href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css">https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css</a>
+otherwise we can&#8217;t load CSS in some (most?) cases. Using jsdelivr.net as
+a proxy instead of directly accessing Github, prevents the following error:</p>
+
+<blockquote>
+  <p>The resource from “https://raw.github.com/p19z/markdowncss/master/markdown.css”
+was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).</li>
+</ul></p>
+</blockquote>
