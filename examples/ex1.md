@@ -14,7 +14,7 @@ Here are some of the problems with default Markdown syntax:
 
 ## Large Note
 
-This CSS file borrows extensively from the [Space]("http://getspace.org")
+This CSS file borrows extensively from the "Space"
 WordPress theme, which will give you a lot more tools to make your
 blog search engine friendly than just 70 lines of CSS. It's also
 guaranteed to be compatible in more browsers than this stylesheet.
