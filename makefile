@@ -1,6 +1,7 @@
 all: \
   README.html \
-  examples/ex1+cssV1.html \
+  examples/ex1+master.html \
+  examples/ex1+ref1.0.html \
   examples/ex1+staging.html
 
 
@@ -10,8 +11,14 @@ README.html: \
 	cmd /c mdpl /OUT $@ $^
 
 
-examples/ex1+cssV1.html: \
-  examples/ex1+cssV1.md
+examples/ex1+master.html: \
+  examples/ex1+master.md
+
+	cmd /c mdpl /OUT $@ $^
+
+
+examples/ex1+ref1.0.html: \
+  examples/ex1+ref1.0.md
 
 	cmd /c mdpl /OUT $@ $^
 
