@@ -373,7 +373,8 @@ the CSS I'm using to style this document:
 
 ### Get Started
 
-Include the following line at the top of your `.markdown` file:
+Just add the following line to the top of your
+`.md`, `.mdx`, `.text` or `.markdown` files:
 
     <link type="text/css" rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/legacy/md-1.0.0.0.css"/>

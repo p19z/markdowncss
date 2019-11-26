@@ -1,12 +1,14 @@
 <link type="text/css" rel="stylesheet"
 href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css"/>
 
+
 # Pretty markdown stylesheets
 
 Markdown.css is better default styling for your Markdown files. It was
 originally inspired by the "Space" WordPress theme. This page is itself
 a Markdown file using the `markdown.css` stylesheet. View the source
 code [here](https://raw.github.com/p19z/markdowncss/master/README.md).
+
 
 ### Sample file
 
@@ -15,7 +17,8 @@ View a sample file that implements most of the Markdown spec
 as well as the raw markdown source
 [here](https://raw.github.com/p19z/markdowncss/master/examples/ex1.html).
 
-### Getting started
+
+### Get Started
 
 Just add the following line to the top of your
 `.md`, `.mdx`, `.text` or `.markdown` files:
@@ -28,10 +31,18 @@ Alternatively, for the latest stable release:
     <link type="text/css" rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css"/>
 
-##### Note:
+Experimental stylesheet can be included through:
 
-For the markdown to parse correctly, you need to add the closing `<link>`
-tag. This is not technically correct HTML, but it will parse in any browser.
+    <link type="text/css" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown-staging.css"/>
+
+
+##### Note: explicit closing tag
+
+Depending on your framework and final rendering engine, for the markdown
+to parse correctly, you might need to add an explicit closing `</link>`
+tag. This is not technically correct HTML, but might be a workaround if
+you experience problems with the `<link>` tag on its own.
 
 
 ### History
@@ -41,5 +52,5 @@ tag. This is not technically correct HTML, but it will parse in any browser.
 and change link to use <https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css>
 otherwise we can't load CSS in some (most?) cases. Using jsdelivr.net as
 a proxy instead of directly accessing Github, prevents the following error:
-> The resource from “https://bitbucket.org/p19z/markdowncss/raw/master/markdown.css”
+> The resource from “https://raw.github.com/p19z/markdowncss/master/markdown.css”
 > was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).
