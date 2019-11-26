@@ -1,11 +1,22 @@
 all: \
-  README.html \
-  examples\ex1.html
+	README.html \
+	examples/ex1.html \
+	examples/ex1+staging.html
 
-examples\ex1.html: \
-  examples\ex1.md
-	cmd /c mdpl /OUT $@ $^
 
 README.html: \
-  README.md
+	README.md
+
+	cmd /c mdpl /OUT $@ $^
+
+
+examples/ex1.html: \
+	examples/ex1.md
+
+	cmd /c mdpl /OUT $@ $^
+
+
+examples/ex1+staging.html: \
+	examples/ex1+staging.md
+
 	cmd /c mdpl /OUT $@ $^
