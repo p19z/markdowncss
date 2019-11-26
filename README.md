@@ -1,23 +1,32 @@
-<link href="https://bitbucket.org/p19z/markdowncss/raw/master/markdown.css" rel="stylesheet"></link>
+<link type="text/css" rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css"/>
 
-# Let's make the Web prettier BIS.
+# Pretty markdown stylesheets
 
-Markdown.css is better default styling for your Markdown files. It's
-heavily inspired by the "Space" WordPress theme. This page is itself a
- Markdown file using the `markdown.css` stylesheet. View the source
-code [here](https://bitbucket.org/p19z/markdowncss/raw/master/markdown.css/index.md).
+Markdown.css is better default styling for your Markdown files. It was
+originally inspired by the "Space" WordPress theme. This page is itself
+a Markdown file using the `markdown.css` stylesheet. View the source
+code [here](https://raw.github.com/p19z/markdowncss/master/README.md).
 
-### Sample File
+### Sample file
 
 View a sample file that implements most of the Markdown spec
-[here](https://bitbucket.org/p19z/markdowncss/raw/master/markdown.css/sample.html).
+[here](https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/examples/ex1.html)
+as well as the raw markdown source
+[here](https://raw.github.com/p19z/markdowncss/master/examples/ex1.html).
 
-### Get Started
+### Getting started
 
-Just add the following line to the top of your `.md`, `.text` or `.markdown`
-files:
+Just add the following line to the top of your
+`.md`, `.mdx`, `.text` or `.markdown` files:
 
-    <link href="https://bitbucket.org/p19z/markdowncss/raw/master/markdown.css" rel="stylesheet"></link>
+    <link type="text/css" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/legacy/md-1.0.0.0.css"/>
+
+Alternatively, for the latest stable release:
+
+    <link type="text/css" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css"/>
 
 ##### Note:
 
@@ -27,7 +36,10 @@ tag. This is not technically correct HTML, but it will parse in any browser.
 
 ### History
 
-SEP 20, 2012 - Copied from Kevin Burke's project <http://bitbucket.org/kevinburke/markdowncss>.
-NOV 25, 2019 - Updated URLs, prefer using <https://bitbucket.org/p19z/markdowncss>.
-Alternative repository available at <https://github.com/p19z/markdowncss>, ie.
-via <https://raw.githubusercontent.com/p19z/markdowncss/master/markdown.css>.
+* SEP 20, 2012 - Copied from Kevin Burke's project <http://bitbucket.org/kevinburke/markdowncss>.
+* NOV 25, 2019 - Updated URLs, switch to using <https://github.com/p19z/markdowncss>,
+and change link to use <https://cdn.jsdelivr.net/gh/p19z/markdowncss@master/markdown.css>
+otherwise we can't load CSS in some (most?) cases. Using jsdelivr.net as
+a proxy instead of directly accessing Github, prevents the following error:
+> The resource from “https://bitbucket.org/p19z/markdowncss/raw/master/markdown.css”
+> was blocked due to MIME type (“text/plain”) mismatch (X-Content-Type-Options: nosniff).
